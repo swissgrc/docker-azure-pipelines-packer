@@ -1,0 +1,12 @@
+name: Lint Code Base
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  lint-image:
+    name: Lint Code Base
+    uses: swissgrc/.github/.github/workflows/lint-image.yml@main
+    secrets:
+      gh-token: ${{ secrets.GITHUB_TOKEN }}
