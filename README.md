@@ -49,5 +49,6 @@ The following example shows the container used for a deployment step with a Pack
 | 1.8.7    | [Packer 1.8.7](https://github.com/hashicorp/packer/releases/tag/v1.8.7)         | swissgrc/azure-pipelines-azurecli:2.48.1      | 1.8.7  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.8.7?style=flat-square)    |
 | 1.9.0    | [Packer 1.9.0](https://github.com/hashicorp/packer/releases/tag/v1.9.0)         | swissgrc/azure-pipelines-azurecli:2.49.0      | 1.9.0  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.9.0?style=flat-square)    |
 | 1.9.1    | [Packer 1.9.0](https://github.com/hashicorp/packer/releases/tag/v1.9.1)         | swissgrc/azure-pipelines-azurecli:2.50.0-net6 | 1.9.1  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.9.1?style=flat-square)    |
+| 1.9.2    | [Packer 1.9.2](https://github.com/hashicorp/packer/releases/tag/v1.9.2)         | swissgrc/azure-pipelines-azurecli:2.50.0-net6 | 1.9.2  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.9.2?style=flat-square)    |
 
 [Azure Pipelines container jobs]: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases
