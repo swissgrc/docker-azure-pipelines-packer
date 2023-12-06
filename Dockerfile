@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM ghcr.io/swissgrc/azure-pipelines-azurecli:2.51.0-net6 AS base
+FROM ghcr.io/swissgrc/azure-pipelines-azurecli:2.55.0-net6 AS base
 
 
 # Builder image
@@ -10,16 +10,16 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Download Packer
 
-# renovate: datasource=repology depName=debian_11/curl versioning=loose
-ENV CURL_VERSION=7.74.0-1.3+deb11u7
+# renovate: datasource=repology depName=debian_12/curl versioning=deb
+ENV CURL_VERSION=7.88.1-10+deb12u4
 # renovate: datasource=github-releases depName=hashicorp/packer extractVersion=^v(?<version>.*)$
-ENV PACKER_VERSION=1.9.4
-# renovate: datasource=repology depName=debian_11/unzip versioning=loose
-ENV UNZIP_VERSION=6.0-26+deb11u1
+ENV PACKER_VERSION=1.10.0
+# renovate: datasource=repology depName=debian_12/unzip versioning=deb
+ENV UNZIP_VERSION=6.0
 
 RUN apt-get update -y && \
   # Install necessary dependencies
-  apt-get install -y --no-install-recommends curl=${CURL_VERSION} unzip=${UNZIP_VERSION} && \
+  apt-get install -y --no-install-recommends curl=${CURL_VERSION} unzip=${UNZIP_VERSION}-28 && \
   # Download Packer
   curl -o /tmp/packer.zip https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip && \
   unzip /tmp/packer.zip -d /tmp && \
