@@ -13,7 +13,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # renovate: datasource=repology depName=debian_12/curl versioning=deb
 ENV CURL_VERSION=7.88.1-10+deb12u5
 # renovate: datasource=github-releases depName=hashicorp/packer extractVersion=^v(?<version>.*)$
-ENV PACKER_VERSION=1.10.3
+ENV PACKER_VERSION=1.11.0
 # renovate: datasource=repology depName=debian_12/unzip versioning=deb
 ENV UNZIP_VERSION=6.0
 
