@@ -10,15 +10,6 @@ Docker image to run Packer commands in [Azure Pipelines container jobs].
 
 This image can be used to run Packer commands in [Azure Pipelines container jobs].
 
-The following software is additionally available in the image:
-
-| Software   | Included since |
-|------------|----------------|
-| Azure Cli  | 1.8.6          |
-| Git        | 1.8.6          |
-| .NET       | 1.8.6          |
-| Docker CLI | 1.8.6          |
-
 ### Azure Pipelines Container Job
 
 To use the image in an Azure Pipelines Container Job, add one of the following example tasks and use it with the `container` property.
@@ -39,26 +30,16 @@ The following example shows the container used for a deployment step with a Pack
                     packer build .
 ```
 
-### Tags
+## Included Software
+- [swissgrc/azure-pipelines-azurecli:net9](https://github.com/swissgrc/docker-azure-pipelines-azurecli-net9) as base image
+- Packer
 
-| Tag      | Description                                                                     | Base Image                                    | Packer | Size                                                                                                                            |
-|----------|---------------------------------------------------------------------------------|-----------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------|
-| latest   | Latest stable release (from `main` branch)                                      | swissgrc/azure-pipelines-azurecli:2.68.0-net9 | 1.12.0 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/latest?style=flat-square)   |
-| unstable | Latest unstable release (from `develop` branch)                                 | swissgrc/azure-pipelines-azurecli:2.68.0-net9 | 1.12.0 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/unstable?style=flat-square) |
-| 1.8.6    | [Packer 1.8.6](https://github.com/hashicorp/packer/releases/tag/v1.8.6)         | swissgrc/azure-pipelines-azurecli:2.46.0      | 1.8.6  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.8.6?style=flat-square)    |
-| 1.8.7    | [Packer 1.8.7](https://github.com/hashicorp/packer/releases/tag/v1.8.7)         | swissgrc/azure-pipelines-azurecli:2.48.1      | 1.8.7  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.8.7?style=flat-square)    |
-| 1.9.0    | [Packer 1.9.0](https://github.com/hashicorp/packer/releases/tag/v1.9.0)         | swissgrc/azure-pipelines-azurecli:2.49.0      | 1.9.0  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.9.0?style=flat-square)    |
-| 1.9.1    | [Packer 1.9.1](https://github.com/hashicorp/packer/releases/tag/v1.9.1)         | swissgrc/azure-pipelines-azurecli:2.50.0-net6 | 1.9.1  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.9.1?style=flat-square)    |
-| 1.9.2    | [Packer 1.9.2](https://github.com/hashicorp/packer/releases/tag/v1.9.2)         | swissgrc/azure-pipelines-azurecli:2.50.0-net6 | 1.9.2  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.9.2?style=flat-square)    |
-| 1.9.3    | [Packer 1.9.3](https://github.com/hashicorp/packer/releases/tag/v1.9.3)         | swissgrc/azure-pipelines-azurecli:2.50.0-net6 | 1.9.3  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.9.3?style=flat-square)    |
-| 1.9.4    | [Packer 1.9.4](https://github.com/hashicorp/packer/releases/tag/v1.9.4)         | swissgrc/azure-pipelines-azurecli:2.51.0-net6 | 1.9.4  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.9.4?style=flat-square)    |
-| 1.10.0   | [Packer 1.10.0](https://github.com/hashicorp/packer/releases/tag/v1.10.0)       | swissgrc/azure-pipelines-azurecli:2.55.0-net6 | 1.10.0 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.10.0?style=flat-square)   |
-| 1.10.1   | [Packer 1.10.1](https://github.com/hashicorp/packer/releases/tag/v1.10.1)       | swissgrc/azure-pipelines-azurecli:2.56.0-net8 | 1.10.1 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.10.1?style=flat-square)   |
-| 1.10.2   | [Packer 1.10.2](https://github.com/hashicorp/packer/releases/tag/v1.10.2)       | swissgrc/azure-pipelines-azurecli:2.57.0-net8 | 1.10.2 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.10.2?style=flat-square)   |
-| 1.10.3   | [Packer 1.10.3](https://github.com/hashicorp/packer/releases/tag/v1.10.3)       | swissgrc/azure-pipelines-azurecli:2.59.0-net8 | 1.10.3 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.10.3?style=flat-square)   |
-| 1.11.0   | [Packer 1.11.0](https://github.com/hashicorp/packer/releases/tag/v1.11.0)       | swissgrc/azure-pipelines-azurecli:2.61.0-net8 | 1.11.0 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.11.0?style=flat-square)   |
-| 1.11.1   | [Packer 1.11.1](https://github.com/hashicorp/packer/releases/tag/v1.11.1)       | swissgrc/azure-pipelines-azurecli:2.62.0-net8 | 1.11.1 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.11.1?style=flat-square)   |
-| 1.11.2   | [Packer 1.11.2](https://github.com/hashicorp/packer/releases/tag/v1.11.2)       | swissgrc/azure-pipelines-azurecli:2.64.0-net8 | 1.11.2 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.11.2?style=flat-square)   |
-| 1.12.0   | [Packer 1.12.0](https://github.com/hashicorp/packer/releases/tag/v1.12.0)       | swissgrc/azure-pipelines-azurecli:2.68.0-net9 | 1.12.0 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/1.12.0?style=flat-square)   |
+## Tags
+
+| Tag      | Description                                           | Size                                                                                                                            |
+|----------|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| latest   | Latest stable release (from `main` branch)            | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/latest?style=flat-square)   |
+| unstable | Latest unstable release (from `develop` branch)       | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-packer/unstable?style=flat-square) |
+| x.y.z    | Image for a specific version of Packer                |                                                                                                                                 |
 
 [Azure Pipelines container jobs]: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases
