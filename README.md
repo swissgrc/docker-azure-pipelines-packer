@@ -30,10 +30,11 @@ The following example shows the container used for a deployment step with a Pack
                     packer build .
 ```
 
-### Included Software
+## Included Software
+- [swissgrc/azure-pipelines-azurecli:net9](https://github.com/swissgrc/docker-azure-pipelines-azurecli-net9) as base image
 - Packer
 
-### Tags
+## Tags
 
 | Tag      | Description                                           | Size                                                                                                                            |
 |----------|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
