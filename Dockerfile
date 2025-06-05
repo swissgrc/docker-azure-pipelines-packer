@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM ghcr.io/swissgrc/azure-pipelines-azurecli:2.68.0-net9 AS base
+FROM ghcr.io/swissgrc/azure-pipelines-azurecli:2.74.0-net9 AS base
 
 
 # Builder image
@@ -11,7 +11,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Download Packer
 
 # renovate: datasource=github-releases depName=hashicorp/packer extractVersion=^v(?<version>.*)$
-ENV PACKER_VERSION=1.12.0
+ENV PACKER_VERSION=1.13.0
 # renovate: datasource=repology depName=debian_12/unzip versioning=deb
 ENV UNZIP_VERSION=6.0
 
