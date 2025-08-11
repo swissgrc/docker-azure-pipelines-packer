@@ -11,7 +11,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Download Packer
 
 # renovate: datasource=github-releases depName=hashicorp/packer extractVersion=^v(?<version>.*)$
-ENV PACKER_VERSION=1.13.1
+ENV PACKER_VERSION=1.14.1
 # renovate: datasource=repology depName=debian_12/unzip versioning=deb
 ENV UNZIP_VERSION=6.0
 
